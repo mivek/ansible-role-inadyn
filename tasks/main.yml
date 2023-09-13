@@ -26,3 +26,11 @@
     cmd: inadyn --check-config -f "{{ __inadyn_config_path }}"
   when: inadyn_check_config is defined and inadyn_check_config
   changed_when: false
+
+- name: Enable inadyn daemon
+  ansible.builtin.lineinfile:
+    regexp: '^RUN_DAEMON='
+    line: 'RUN_DAEMON="yes"'
+    path: /etc/default/inadyn
+  when: not inadyn_install_source
+  notify: Restart inadyn
