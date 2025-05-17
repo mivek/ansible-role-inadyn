@@ -1,3 +1,5 @@
+
+#jinja2: trim_blocks: "true", lstrip_blocks: "false"
 #{{ ansible_managed }}
 
 # In-A-Dyn v2.0 configuration file format
@@ -10,16 +12,16 @@ provider {{ provider.name }}{% if provider.index is defined and provider.index %
   password        = {{ provider.password }}
   hostname        = {{ provider.hostname }}
   {% if provider.checkip_server is defined and provider.checkip_server %}
-  checkip_server  = {{ provider.checkip_server }}
+  checkip-server  = {{ provider.checkip_server }}
   {% endif %}
   {% if provider.checkip_ssl is defined and provider.checkip_ssl %}
-  checkip_ssl     = {{ provider.checkip_ssl }}
+  checkip-ssl     = {{ provider.checkip_ssl }}
   {% endif %}
   {% if provider.checkip_path is defined and provider.checkip_path %}
-  checkip_path    = {{ provider.checkip_path }}
+  checkip-path    = {{ provider.checkip_path }}
   {% endif %}
   {% if provider.checkip_command is defined and provider.checkip_command %}
-  checkip_command = {{ provider.checkip_command }}
+  checkip-command = {{ provider.checkip_command }}
   {% endif %}
   {% if provider.ssl is defined and provider.ssl %}
   ssl             = {{ provider.ssl }}
