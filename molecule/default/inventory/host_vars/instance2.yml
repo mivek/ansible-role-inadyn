@@ -1,7 +1,7 @@
 ---
-
 inadyn_install_source: true
 inadyn_version: 2.10.0
+inadyn_allow_ipv6: true
 inadyn_providers:
   - name: freedns
     username: freedns_user1

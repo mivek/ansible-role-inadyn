@@ -3,6 +3,7 @@
 # In-A-Dyn v2.0 configuration file format
 period            = {{ inadyn_period }}
 user-agent        = {{ inadyn_user_agent }}
+allow-ipv6        = {{ inadyn_allow_ipv6 }}
 
 {% for provider in inadyn_providers %}
 provider {{ provider.name }}{% if provider.index is defined and provider.index %}:{{ provider.index }}{% endif %} {
