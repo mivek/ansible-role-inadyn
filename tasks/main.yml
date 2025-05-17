@@ -17,8 +17,8 @@
     src: inadyn.conf.j2
     dest: "{{ __inadyn_config_path }}"
     owner: root
-    group: root
-    mode: 0644
+    group: debian-inadyn
+    mode: 0640
   notify: Restart inadyn
 
 - name: Test the configuration
