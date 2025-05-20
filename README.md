@@ -1,15 +1,12 @@
-Role Name
-=========
+# Role Name
 
 This role installs and configures [inadyn](https://github.com/troglobit/inadyn)
 
-Requirements
-------------
+## Requirements
 
 None.
 
-Role Variables
---------------
+## Role Variables
 
 `inadyn_perdiod`: Update interval
 
@@ -18,6 +15,8 @@ Role Variables
 `inadyn_version`: Version to install. Only required when building from source.
 
 `inadyn_install_source`: Whether to install inadyn from source
+
+`inadyn_allow_ipv6`: Whether to allow IPv6 for inadyn updates.
 
 `inadyn_providers`: List of providers to add to the configuration. The following fields are available:
 
@@ -37,14 +36,11 @@ Role Variables
     - ddns_path
     - index: Indice to add when multiple provider of the same name are given
 
-
-Dependencies
-------------
+## Dependencies
 
 None
 
-Example Playbook
-----------------
+## Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
@@ -54,6 +50,7 @@ Including an example of how to use your role (for instance, with variables passe
       vars:
         inadyn_install_source: true
         inadyn_version: 2.10.0
+        inadyn_allow_ipv6: true
         inadyn_providers:
             - name: freedns
               username: freedns_user1
@@ -71,14 +68,11 @@ Including an example of how to use your role (for instance, with variables passe
               password: snoopy
               hostname: "{ peanuts,woodstock }"
               user_agent: "Mozilla/4.0"
-    
 
-License
--------
+## License
 
 GNU General Public License v3.0
 
-Author Information
-------------------
+## Author Information
 
 [Github](https://github.com/mivek)
